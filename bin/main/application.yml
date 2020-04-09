@@ -1,6 +1,19 @@
 spring:
   application:
     name: "${IMAGE_NAME:template-spring-boot}"
+  cloud:
+    stream:
+      bindings:     
+        cargoBookingChannel:
+          destination: cargoBookings
+          group: cargoBookingsQueue
+        cargoRoutingChannel:
+          destination: cargoRoutings 
+          group: cargoRoutingsQueue
+        cargoHandlingChannel2:
+          destination: cargoHandlings2
+          group: cargoHandlingsQueue2   
+          contentType: 'application/json'    
 
 hello:
   pattern: "Hello there, %s!"

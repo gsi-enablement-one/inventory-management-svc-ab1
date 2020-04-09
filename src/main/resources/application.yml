@@ -1,9 +1,9 @@
 spring:
   application:
-    name: "${IMAGE_NAME:template-spring-boot}"
+    name: "${IMAGE_NAME:template-spring-boot}"            
 
 hello:
-  pattern: "Hello there, %s!"
+  pattern: "Hi there, %s!"
 
 greetingservice:
   beanName: "hola"
